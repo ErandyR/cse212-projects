@@ -19,6 +19,16 @@ public static class Divisors {
     private static List<int> FindDivisors(int number) {
         List<int> results = new();
         // TODO problem 1
+        // 1. Create a new list to hold the divisors.
+        // 2. Use a for loop to iterate from 1 to number - 1.
+        // 3. In each iteration, check if the number is divisible by the current index using modulo.
+        // 4. If it is divisible, add the current index to the list of divisors.
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                results.Add(i);
+            }
+        }   
+        
         return results;
     }
 }
